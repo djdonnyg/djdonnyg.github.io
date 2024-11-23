@@ -4,35 +4,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DJ Donny G</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #808080;
+        }
+
+        /* Socials Section Styles */
+        .socials-section {
+            margin-top: 80px;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .socials-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .socials-container h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .social-buttons {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .social-button {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+            background-color: #1a1a1a;
+            transition: all 0.3s ease;
+            width: 400px; /* Increased width further */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .social-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            background-color: #333333;
+        }
+
+        .divider {
+            width: 80%;
+            max-width: 1200px;
+            height: 1px;
+            background-color: #d3d3d3;
+            margin: 30px auto;
+        }
+
+        .watermark {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            color: #808080;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        .radio-section {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .radio-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .radio-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+    </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1>DJ Donny G</h1>
+        <div class="nav-container">
+            <a href="index.html" class="logo">DJ DONNY G</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="feedback.html">Give us feedback</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="feedback.html">Give us feedback</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
     </header>
-    <main>
-        <section class="socials">
+
+    <section class="socials-section">
+        <div class="socials-container">
             <h2>Our Socials</h2>
-            <div class="buttons">
-                <a href="https://www.youtube.com/@DJDonnyG" target="_blank" class="btn">Subscribe to our YouTube Channel</a>
-                <a href="https://discord.gg/Pq7XT2EsH5" target="_blank" class="btn">Join our Discord Server</a>
-                <a href="https://www.twitch.tv/dj_donny_g" target="_blank" class="btn">Follow us on Twitch</a>
+            <div class="social-buttons">
+                <a href="https://www.youtube.com/@DJDonnyG" target="_blank" class="social-button">
+                    Subscribe to our YouTube Channel
+                </a>
+                <a href="https://discord.gg/Pq7XT2EsH5" target="_blank" class="social-button">
+                    Join our Discord Server
+                </a>
+                <a href="https://www.twitch.tv/dj_donny_g" target="_blank" class="social-button">
+                    Follow us on Twitch
+                </a>
             </div>
-        </section>
-    </main>
-    <div class="watermark">
-        Website is still under development
-    </div>        
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="radio-section">
+        <div class="radio-container">
+            <h2>DJ Donny G 24/7 Radio Station</h2>
+            <iframe src="https://zeno.fm/player/dj-donny-g-radio" width="768" height="300" frameborder="0" scrolling="no"></iframe>
+            <a href="https://zeno.fm/" target="_blank" style="display: block; font-size: 0.9em; line-height: 10px;">A Zeno.FM Station</a>
+        </div>
+    </section>
+
+    <div class="watermark">Website is still under development</div>
 </body>
 </html>
