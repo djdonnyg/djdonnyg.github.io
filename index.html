@@ -58,10 +58,26 @@
             color: #808080;
         }
 
+        .profile-section {
+            margin-top: 100px; /* Space for fixed header */
+            padding: 20px;
+            padding-bottom: 0; /* Removed bottom padding */
+            text-align: center;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px; /* Reduced from 30px */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
         /* Socials Section Styles */
         .socials-section {
-            margin-top: 80px;
-            padding: 30px 20px;
+            margin-top: 0;
+            padding: 20px 20px; /* Reduced padding */
             text-align: center;
         }
 
@@ -72,7 +88,7 @@
 
         .socials-container h2 {
             font-size: 36px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .social-buttons {
@@ -139,6 +155,201 @@
             align-items: center;
             gap: 10px;
         }
+
+        .highlights-section {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .highlights-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .highlights-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            margin: 20px 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .highlights-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .highlights-link:hover {
+            color: #333333;
+            text-decoration: underline;
+        }
+
+        .gallery-section {
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .gallery-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .gallery-container {
+            max-width: 800px; /* Reduced from 1000px */
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .gallery-image-container {
+            position: relative;
+            width: 600px; /* Reduced from 800px */
+            height: 400px; /* Adjusted for better proportion */
+            overflow: hidden;
+        }
+
+        .gallery-image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Changed from cover to maintain image proportions */
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            border-radius: 10px;
+            left: 0; /* Ensure image is aligned left */
+            right: 0; /* Ensure image is aligned right */
+            margin: 0 auto; /* Center the image */
+        }
+
+        .gallery-image.active {
+            opacity: 1;
+        }
+
+        .gallery-btn {
+            background-color: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            cursor: pointer;
+            font-size: 24px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            flex-shrink: 0; /* Prevent buttons from shrinking */
+        }
+
+        .gallery-btn:hover {
+            background-color: #333333;
+            transform: scale(1.1);
+        }
+
+        .gallery-btn:active {
+            transform: scale(0.95);
+        }
+
+        .contribute-section {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .contribute-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contribute-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .contribute-text {
+            font-size: 18px;
+        }
+
+        .wiki-link {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .wiki-link:hover {
+            color: #333333;
+            text-decoration: underline;
+        }
+
+        .footer {
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .footer-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .footer-icon:hover {
+            transform: translateY(-5px);
+        }
+
+        .footer-icon img {
+            width: 20px;  /* Reduced from 25px */
+            height: 20px; /* Reduced from 25px */
+            object-fit: contain;
+        }
+
+        .copyright {
+            font-size: 14px;
+            color: #1a1a1a;
+        }
+
+        .policy-link {
+            color: #1a1a1a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .policy-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -156,6 +367,10 @@
             </nav>
         </div>
     </header>
+
+    <div class="profile-section">
+        <img src="images/channelpfp.jpg" alt="DJ Donny G Profile Picture" class="profile-picture">
+    </div>
 
     <section class="socials-section">
         <div class="socials-container">
@@ -184,6 +399,97 @@
         </div>
     </section>
 
+    <div class="divider"></div>
+
+    <section class="highlights-section">
+        <div class="highlights-container">
+            <h2>Stream Highlights</h2>
+            <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/1m8NTSgX3vFX2nmkuaepdq5u1qFNT-OZg/view?usp=sharing" 
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0" 
+                        webkitallowfullscreen="true" 
+                        mozallowfullscreen="true" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+            <a href="highlights.html" class="highlights-link">See more highlights here</a>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="gallery-section">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <button class="gallery-btn prev-btn">❮</button>
+            <div class="gallery-image-container">
+                <img src="images/channelpfp.jpg" class="gallery-image active" alt="Channel Profile Picture">
+                <img src="images/djdonnyg.jpg" class="gallery-image" alt="DJ Donny G">
+                <img src="images/msc.jpg" class="gallery-image" alt="MSC">
+                <img src="images/teimoshop.png" class="gallery-image" alt="Teimo Shop">
+            </div>
+            <button class="gallery-btn next-btn">❯</button>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="contribute-section">
+        <div class="contribute-container">
+            <h2>We contribute at:</h2>
+            <p class="contribute-text">
+                My Summer Car's Wikipedia Page: 
+                <a href="https://en.wikipedia.org/wiki/My_Summer_Car" target="_blank" class="wiki-link">My Summer Car - Wikipedia</a>
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="https://www.youtube.com/@DJDonnyG" target="_blank" class="footer-icon">
+                    <img src="images/youtube-logo.webp" alt="YouTube">
+                </a>
+                <a href="https://www.twitch.tv/dj_donny_g" target="_blank" class="footer-icon">
+                    <img src="images/twitch-logo.webp" alt="Twitch">
+                </a>
+                <a href="https://discord.gg/Pq7XT2EsH5" target="_blank" class="footer-icon">
+                    <img src="images/discord-logo.webp" alt="Discord">
+                </a>
+            </div>
+            <div class="copyright">
+                ©2023-2024 | <a href="policy.html" class="policy-link">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
     <div class="watermark">Website is still under development</div>
+
+    <script>
+        const images = document.querySelectorAll('.gallery-image');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        let currentImageIndex = 0;
+
+        function showImage(index) {
+            images.forEach(img => img.classList.remove('active'));
+            images[index].classList.add('active');
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            showImage(currentImageIndex);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            showImage(currentImageIndex);
+        });
+
+        // Initialize first image
+        showImage(currentImageIndex);
+    </script>
 </body>
 </html>
