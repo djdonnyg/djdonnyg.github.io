@@ -461,6 +461,26 @@
                 display: block;
             }
         }
+
+        .floating-profile-picture {
+            position: fixed;
+            top: 14px;
+            left: 300px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1001;
+            display: none;
+        }
+
+        .floating-profile-picture.visible {
+            opacity: 1;
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -619,6 +639,26 @@
         function closeMobileMenu() {
             document.querySelector('.mobile-overlay').classList.remove('active');
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const profilePicture = document.querySelector('.profile-picture');
+            const floatingProfilePicture = document.createElement('img');
+            floatingProfilePicture.src = profilePicture.src;
+            floatingProfilePicture.alt = 'Floating DJ Donny G Profile Picture';
+            floatingProfilePicture.classList.add('floating-profile-picture');
+            
+            document.body.appendChild(floatingProfilePicture);
+
+            window.addEventListener('scroll', () => {
+                const profileSectionBottom = profilePicture.getBoundingClientRect().bottom;
+                
+                if (profileSectionBottom <= 0) {
+                    floatingProfilePicture.classList.add('visible');
+                } else {
+                    floatingProfilePicture.classList.remove('visible');
+                }
+            });
+        });
     </script>
 </body>
 </html>
