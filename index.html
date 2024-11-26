@@ -350,13 +350,36 @@
         .policy-link:hover {
             text-decoration: underline;
         }
+
+        .menu-toggle {
+        display: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+        }
+
+        .nav-links {
+            display: none;
+            width: 100%;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+    }
     </style>
 </head>
 <body>
     <header>
         <div class="nav-container">
             <a href="index.html" class="logo">DJ DONNY G</a>
-            <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <nav class="mobile-nav">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="blog.html">Blog</a></li>
@@ -483,6 +506,13 @@
 
         // Initialize first image
         showImage(currentImageIndex);
+
+        function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        const menuToggle = document.querySelector('.menu-toggle');
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    }
     </script>
 </body>
 </html>
