@@ -452,6 +452,10 @@
                 display: none;
             }
 
+            .mobile-only {
+                display: none !important;
+            }
+
             .radio-embed-desktop {
                 display: block;
             }
@@ -475,7 +479,7 @@
         </div>
     </header>
 
-    <div class="mobile-overlay">
+    <div class="mobile-overlay mobile-only">
         <span class="close-menu" onclick="closeMobileMenu()">×</span>
         <ul class="mobile-overlay-links">
             <li><a href="index.html">Home</a></li>
