@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Donny G - Contact</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #808080;
+        }
+
+        .contact-form {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer {
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .footer-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .footer-icon:hover {
+            transform: translateY(-5px);
+        }
+
+        .footer-icon img {
+            width: 20px;  /* Reduced from 25px */
+            height: 20px; /* Reduced from 25px */
+            object-fit: contain;
+        }
+
+        .copyright {
+            font-size: 14px;
+            color: #1a1a1a;
+        }
+
+        .policy-link {
+            color: #1a1a1a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .policy-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">DJ DONNY G</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="feedback.html">Give us feedback</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="contact-form">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfJUuKMoLumlQ788B33XKi3TgMr0W-D9uKCvToyZd11hmb1LA/viewform?embedded=true" width="640" height="784" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="https://www.youtube.com/@DJDonnyG" target="_blank" class="footer-icon">
+                    <img src="images/youtube-logo.webp" alt="YouTube">
+                </a>
+                <a href="https://www.twitch.tv/dj_donny_g" target="_blank" class="footer-icon">
+                    <img src="images/twitch-logo.webp" alt="Twitch">
+                </a>
+                <a href="https://discord.gg/Pq7XT2EsH5" target="_blank" class="footer-icon">
+                    <img src="images/discord-logo.webp" alt="Discord">
+                </a>
+            </div>
+            <div class="copyright">
+                ©2023-2024 | <a href="policy.html" class="policy-link">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
