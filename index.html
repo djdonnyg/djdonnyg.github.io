@@ -432,6 +432,30 @@
                 }
             }
         }
+
+        @media screen and (max-width: 768px) {
+            .radio-embed-desktop {
+                display: none;
+            }
+
+            .radio-embed-mobile {
+                display: block;
+                text-align: center;
+                padding: 20px;
+                font-size: 16px;
+                color: #1a1a1a;
+            }
+        }
+
+        @media screen and (min-width: 769px) {
+            .radio-embed-mobile {
+                display: none;
+            }
+
+            .radio-embed-desktop {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
@@ -488,8 +512,13 @@
     <section class="radio-section">
         <div class="radio-container">
             <h2>DJ Donny G 24/7 Radio Station</h2>
-            <iframe src="https://zeno.fm/player/dj-donny-g-radio" width="768" height="300" frameborder="0" scrolling="no"></iframe>
-            <a href="https://zeno.fm/" target="_blank" style="display: block; font-size: 0.9em; line-height: 10px;">A Zeno.FM Station</a>
+            <div class="radio-embed-desktop">
+                <iframe src="https://zeno.fm/player/dj-donny-g-radio" width="768" height="300" frameborder="0" scrolling="no"></iframe>
+                <a href="https://zeno.fm/" target="_blank" style="display: block; font-size: 0.9em; line-height: 10px;">A Zeno.FM Station</a>
+            </div>
+            <div class="radio-embed-mobile">
+                Radio embed is not available in mobile, please open the website on desktop.
+            </div>
         </div>
     </section>
 
