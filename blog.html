@@ -151,8 +151,20 @@
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
+            <div class="menu-toggle" onclick="toggleMobileMenu()">☰</div>
         </div>
     </header>
+
+    <div class="mobile-overlay mobile-only">
+        <span class="close-menu" onclick="closeMobileMenu()">×</span>
+        <ul class="mobile-overlay-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="feedback.html">Give us feedback</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
 
     <div class="blog-container">
         <article class="blog-post">
@@ -185,5 +197,15 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            document.querySelector('.mobile-overlay').classList.add('active');
+        }
+
+        function closeMobileMenu() {
+            document.querySelector('.mobile-overlay').classList.remove('active');
+        }
+    </script>
 </body>
 </html>
