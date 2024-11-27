@@ -136,6 +136,26 @@
         .policy-link:hover {
             text-decoration: underline;
         }
+
+        @media screen and (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                /* positioning and styling */
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-overlay {
+                display: none;
+                /* overlay styling */
+            }
+
+            .mobile-overlay.active {
+                display: flex;
+            }
+        }
     </style>
 </head>
 <body>
