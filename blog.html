@@ -137,10 +137,21 @@
             text-decoration: underline;
         }
 
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            z-index: 1100;
+        }
+
         @media screen and (max-width: 768px) {
             .menu-toggle {
                 display: block;
-                /* positioning and styling */
+                position: fixed;
+                top: 25px;
+                right: 20px;
+                color: white;
+                font-size: 24px;
+                z-index: 1100;
             }
 
             .nav-links {
@@ -149,11 +160,85 @@
 
             .mobile-overlay {
                 display: none;
-                /* overlay styling */
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: white;
+                z-index: 1050;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                animation: slideIn 0.3s ease;
             }
 
             .mobile-overlay.active {
                 display: flex;
+            }
+
+            .mobile-overlay-links {
+                list-style: none;
+                text-align: center;
+            }
+
+            .mobile-overlay-links li {
+                margin: 20px 0;
+            }
+
+            .mobile-overlay-links a {
+                color: #1a1a1a;
+                text-decoration: none;
+                font-size: 24px;
+                transition: color 0.3s ease;
+            }
+
+            .mobile-overlay-links a:hover {
+                color: #808080;
+            }
+
+            .close-menu {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 36px;
+                color: #1a1a1a;
+                cursor: pointer;
+            }
+
+            @keyframes slideIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(-50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .radio-embed-desktop {
+                display: none;
+            }
+
+            .radio-embed-mobile {
+                display: block;
+                text-align: center;
+                padding: 20px;
+                font-size: 16px;
+                color: #1a1a1a;
+            }
+        }
+
+        @media screen and (min-width: 769px) {
+            .radio-embed-mobile {
+                display: none;
+            }
+
+            .mobile-only {
+                display: none !important;
             }
         }
     </style>
