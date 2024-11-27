@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/channelpfp.jpg">
+    <title>Stream Highlights - DJ Donny G</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #808080;
+        }
+
+        .highlights-container {
+            max-width: 800px;
+            margin: 120px auto 50px;
+            padding: 0 20px;
+        }
+
+        .highlights-section {
+            margin-bottom: 40px;
+        }
+
+        .highlight-title {
+            font-size: 24px;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            margin-bottom: 30px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            z-index: 1100;
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                position: fixed;
+                top: 25px;
+                right: 20px;
+                color: white;
+                font-size: 24px;
+                z-index: 1100;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: white;
+                z-index: 1050;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                animation: slideIn 0.3s ease;
+            }
+
+            .mobile-overlay.active {
+                display: flex;
+            }
+
+            .mobile-overlay-links {
+                list-style: none;
+                text-align: center;
+            }
+
+            .mobile-overlay-links li {
+                margin: 20px 0;
+            }
+
+            .mobile-overlay-links a {
+                color: #1a1a1a;
+                text-decoration: none;
+                font-size: 24px;
+                transition: color 0.3s ease;
+            }
+
+            .mobile-overlay-links a:hover {
+                color: #808080;
+            }
+
+            .close-menu {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 36px;
+                color: #1a1a1a;
+                cursor: pointer;
+            }
+
+            @keyframes slideIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(-50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        footer {
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .footer-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .footer-icon:hover {
+            transform: translateY(-5px);
+        }
+
+        .footer-icon img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+
+        .copyright {
+            font-size: 14px;
+            color: #1a1a1a;
+        }
+
+        .policy-link {
+            color: #1a1a1a;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .policy-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">DJ DONNY G</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="feedback.html">Give us feedback</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" onclick="toggleMobileMenu()">☰</div>
+        </div>
+    </header>
+
+    <div class="mobile-overlay mobile-only">
+        <span class="close-menu" onclick="closeMobileMenu()">×</span>
+        <ul class="mobile-overlay-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="feedback.html">Give us feedback</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="highlights-container">
+        <div class="highlights-section">
+            <h2 class="highlight-title">Epic Bike Fall</h2>
+            <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/1m8NTSgX3vFX2nmkuaepdq5u1qFNT-OZg/view?usp=sharing" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="highlights-section">
+            <h2 class="highlight-title">Donny Dies</h2>
+            <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/1ve4OoGwmeGuTa51jxrHbhn55IccJHn_a/view?usp=sharing" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="highlights-section">
+            <h2 class="highlight-title">Nicely Done</h2>
+            <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/1jlmKINjvfB8gifByft8uyK1OGmLKMtzN/view?usp=sharing" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="highlights-section">
+            <h2 class="highlight-title">POG Dance</h2>
+            <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/1MkGhTdwJwzEptkkOK_W43R6TRIGu9Vbg/view?usp=sharing" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="highlights-section">
+            <h2 class="highlight-title">Total Disappointment</h2>
+            <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/18Pn9LZ7OGMcUB2OKjUXhlTKAsVmUjWzK/view?usp=sharing" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="highlights-section">
+            <h2 class="highlight-title">Towing Master</h2>
+            <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/1AT_TmIYT9E1Jeju0KtCVJ9_yKNVXUIuH/view?usp=sharing" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="https://www.youtube.com/@DJDonnyG" target="_blank" class="footer-icon">
+                    <img src="images/youtube-logo.webp" alt="YouTube">
+                </a>
+                <a href="https://www.twitch.tv/dj_donny_g" target="_blank" class="footer-icon">
+                    <img src="images/twitch-logo.webp" alt="Twitch">
+                </a>
+                <a href="https://discord.gg/Pq7XT2EsH5" target="_blank" class="footer-icon">
+                    <img src="images/discord-logo.webp" alt="Discord">
+                </a>
+            </div>
+            <div class="copyright">
+                ©2023-2024 | <a href="policy.pdf" class="policy-link">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            document.querySelector('.mobile-overlay').classList.add('active');
+        }
+
+        function closeMobileMenu() {
+            document.querySelector('.mobile-overlay').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
