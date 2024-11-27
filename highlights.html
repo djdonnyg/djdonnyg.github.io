@@ -174,6 +174,111 @@
             }
         }
 
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            z-index: 1100;
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                position: fixed;
+                top: 25px;
+                right: 20px;
+                color: white;
+                font-size: 24px;
+                z-index: 1100;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: white;
+                z-index: 1050;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                animation: slideIn 0.3s ease;
+            }
+
+            .mobile-overlay.active {
+                display: flex;
+            }
+
+            .mobile-overlay-links {
+                list-style: none;
+                text-align: center;
+            }
+
+            .mobile-overlay-links li {
+                margin: 20px 0;
+            }
+
+            .mobile-overlay-links a {
+                color: #1a1a1a;
+                text-decoration: none;
+                font-size: 24px;
+                transition: color 0.3s ease;
+            }
+
+            .mobile-overlay-links a:hover {
+                color: #808080;
+            }
+
+            .close-menu {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 36px;
+                color: #1a1a1a;
+                cursor: pointer;
+            }
+
+            @keyframes slideIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(-50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .radio-embed-desktop {
+                display: none;
+            }
+
+            .radio-embed-mobile {
+                display: block;
+                text-align: center;
+                padding: 20px;
+                font-size: 16px;
+                color: #1a1a1a;
+            }
+        }
+
+        @media screen and (min-width: 769px) {
+            .radio-embed-mobile {
+                display: none;
+            }
+
+            .mobile-only {
+                display: none !important;
+            }
+        }
+
         footer {
             padding: 30px 0;
             margin-top: 50px;
@@ -258,42 +363,42 @@
         <div class="highlights-section">
             <h2 class="highlight-title">Epic Bike Fall</h2>
             <div class="video-container">
-                <iframe src="https://drive.google.com/file/d/1m8NTSgX3vFX2nmkuaepdq5u1qFNT-OZg/view?usp=sharing" allowfullscreen></iframe>
+                <iframe src="https://drive.google.com/file/d/1m8NTSgX3vFX2nmkuaepdq5u1qFNT-OZg/preview" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="highlights-section">
             <h2 class="highlight-title">Donny Dies</h2>
             <div class="video-container">
-                <iframe src="https://drive.google.com/file/d/1ve4OoGwmeGuTa51jxrHbhn55IccJHn_a/view?usp=sharing" allowfullscreen></iframe>
+                <iframe src="https://drive.google.com/file/d/1ve4OoGwmeGuTa51jxrHbhn55IccJHn_a/preview" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="highlights-section">
             <h2 class="highlight-title">Nicely Done</h2>
             <div class="video-container">
-                <iframe src="https://drive.google.com/file/d/1jlmKINjvfB8gifByft8uyK1OGmLKMtzN/view?usp=sharing" allowfullscreen></iframe>
+                <iframe src="https://drive.google.com/file/d/1jlmKINjvfB8gifByft8uyK1OGmLKMtzN/preview" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="highlights-section">
             <h2 class="highlight-title">POG Dance</h2>
             <div class="video-container">
-                <iframe src="https://drive.google.com/file/d/1MkGhTdwJwzEptkkOK_W43R6TRIGu9Vbg/view?usp=sharing" allowfullscreen></iframe>
+                <iframe src="https://drive.google.com/file/d/1MkGhTdwJwzEptkkOK_W43R6TRIGu9Vbg/preview" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="highlights-section">
             <h2 class="highlight-title">Total Disappointment</h2>
             <div class="video-container">
-                <iframe src="https://drive.google.com/file/d/18Pn9LZ7OGMcUB2OKjUXhlTKAsVmUjWzK/view?usp=sharing" allowfullscreen></iframe>
+                <iframe src="https://drive.google.com/file/d/18Pn9LZ7OGMcUB2OKjUXhlTKAsVmUjWzK/preview" allowfullscreen></iframe>
             </div>
         </div>
 
         <div class="highlights-section">
             <h2 class="highlight-title">Towing Master</h2>
             <div class="video-container">
-                <iframe src="https://drive.google.com/file/d/1AT_TmIYT9E1Jeju0KtCVJ9_yKNVXUIuH/view?usp=sharing" allowfullscreen></iframe>
+                <iframe src="https://drive.google.com/file/d/1AT_TmIYT9E1Jeju0KtCVJ9_yKNVXUIuH/preview" allowfullscreen></iframe>
             </div>
         </div>
     </div>
